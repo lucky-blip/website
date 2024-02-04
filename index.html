@@ -1,131 +1,614 @@
 <!doctype html>
 <html>
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <style>
     /* Style personnalisé pour le header */
     .header-text {
-        color: purple;
+      color: rgb(184, 60, 16);
     }
-    .bg-gif {
-            background-image: url('https://i.ibb.co/KL4pZhV/okocean-1.gif');
-            background-size: cover;
-            background-position: center;
-        }
-    
-    
-        .image-size {
-        width: 50%; /* Making the image 50% of its container, effectively making it 2x smaller */
-    }
-</style>
-<script>
-    document.addEventListener('DOMContentLoaded', function () {
-        const menuButton = document.querySelector('.mobile-menu-button');
-        const menu = document.querySelector('.mobile-menu');
 
-        menuButton.addEventListener('click', function () {
-            menu.classList.toggle('hidden');
-        });
+    .bg-gif {
+      background-image: url('https://i.ibb.co/KL4pZhV/okocean-1.gif');
+      background-size: cover;
+      background-position: center;
+    }
+
+
+    .image-size {
+      width: 50%;
+      /* Making the image 50% of its container, effectively making it 2x smaller */
+    }
+
+    .image-resize img {
+      width: 30%;
+      /* Resize images to be 50% of their container */
+      margin: 0 auto;
+      /* Center image */
+      display: block;
+    }
+
+    .text-center {
+      text-align: center;
+    }
+
+
+
+
+
+    @font-face {
+      font-family: 'cartoon';
+      src: url('Sobiscuit.otf') format('opentype');
+    }
+
+    body {
+      font-family: 'cartoon', sans-serif;
+    }
+  </style>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const menuButton = document.querySelector('.mobile-menu-button');
+      const menu = document.querySelector('.mobile-menu');
+
+      menuButton.addEventListener('click', function () {
+        menu.classList.toggle('hidden');
+      });
     });
-    
-</script>
- <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+  </script>
+
+  <script>
+    function toggleAccordion(accordionIndex) {
+      document.getElementById(`content-${accordionIndex}`).classList.toggle('max-h-0');
+      document.getElementById(`content-${accordionIndex}`).classList.toggle('max-h-96');
+      document.getElementById(`content-${accordionIndex}`).classList.toggle('p-4');
+      document.getElementById(`arrow-${accordionIndex}`).classList.toggle('rotate-90');
+    }
+  </script>
+  <script>
+    function copyAddress() {
+      navigator.clipboard.writeText("0x7a7E3516ad9B1D853aFB9e8824241f8b4510552a");
+      Swal.fire({
+        title: 'Success !',
+        text: 'Address copied to clipboard!',
+        icon: 'success',
+        confirmButtonText: 'Cool'
+      });
+    }
+  </script>
 </head>
+
 <body>
-      <script>
+
+   <script>
         window.onload = function() {
             Swal.fire({
                 title: 'Website in construction',
-                text: 'Welcome to our website! We are currently in the process of constructing and improving our site. Please bear with us as we work on bringing you the best possible experience. Thank you for your patience.',
+                text: 'Please bear with us as we work on bringing you the best possible experience. Thank you for your patience.',
                 icon: 'info'
             });
         };
-    </script>
-    <nav class="header-bg shadow-lg fixed w-full z-10">
-        <div class="max-w-6xl mx-auto px-4">
-            <div class="flex justify-between items-center">
-                <div>
-                    <a href="#" class="flex items-center py-4 px-2">
-                        <img src="https://i.ibb.co/0mXJ67N/terrycoin.png" alt="Logo" class="h-16 w-auto mr-2">
-                        <span class="font-semibold header-text text-xl">TERRYCOIN</span>
-                    </a>
-                </div>
-                <!-- Bouton de menu mobile -->
-                <div class="md:hidden">
-                    <button class="outline-none mobile-menu-button">
-                        <svg class=" w-6 h-6 text-gray-500 hover:text-green-500 "
-                            fill="none"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                            viewBox="0 0 24 24"
-                            stroke="currentColor">
-                            <path d="M4 6h16M4 12h16m-7 6h7"></path>
-                        </svg>
-                    </button>
-                </div>
-                <!-- Menu vertical pour mobile -->
-                <div class="hidden mobile-menu md:hidden">
-                    <a href="#" class="block py-2 px-4 header-text font-semibold hover:text-green-500 transition duration-300">Home</a>
-                    <a href="#" class="block py-2 px-4 header-text font-semibold hover:text-green-500 transition duration-300">What is TERRYCOIN ?</a>
-                    <a href="#" class="block py-2 px-4 header-text font-semibold hover:text-green-500 transition duration-300">Getting Started</a>
-                    <a href="#" class="block py-2 px-4 header-text font-semibold hover:text-green-500 transition duration-300">Airdrop</a>
-                    <a href="#" class="block py-2 px-4 header-text font-semibold hover:text-green-500 transition duration-300">Exchanges</a>
-                </div>
-                <!-- Sections du menu pour desktop -->
-                <div class="hidden md:flex items-center space-x-1">
-                    <a href="#" class="py-4 px-2 header-text font-semibold hover:text-green-500 transition duration-300">Home</a>
-                    <a href="#" class="py-4 px-2 header-text font-semibold hover:text-green-500 transition duration-300">What is Terry ?</a>
-                    <a href="#" class="py-4 px-2 header-text font-semibold hover:text-green-500 transition duration-300">Getting Started</a>
-                    <a href="#" class="py-4 px-2 header-text font-semibold hover:text-green-500 transition duration-300">Airdrop</a>
-                    <a href="#" class="py-4 px-2 header-text font-semibold hover:text-green-500 transition duration-300">Exchanges</a>
-                </div>
-            </div>
+    </script> 
+
+  <nav class="header-bg shadow-lg fixed w-full z-10">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="flex justify-between items-center">
+        <div>
+          <a href="#" class="flex items-center py-4 px-2">
+            <img src="https://i.ibb.co/0mXJ67N/terrycoin.png" alt="Logo" class="h-16 w-auto mr-2">
+            <span class="font-semibold header-text text-xl">TERRYCOIN</span>
+          </a>
         </div>
-    </nav>
-    <body>
-        <div class="bg-gif h-screen flex flex-col items-center justify-center">
-            <!-- Image in the center -->
-            <img src="https://i.ibb.co/R7J0Xs8/TERRY-bg.png" class="w-1/3" alt="Center Image">
-            
-            <!-- Big text under the image -->
-            <h1 class="text-4xl mt-4">TERRYCOIN</h1>
-    
-            <!-- Smaller text under the big text -->
-            <p class="text-xl mt-2">Inspired by the internet meme "Terry the Fat Shark"</p>
+        <!-- Bouton de menu mobile -->
+        <div class="md:hidden">
+          <button class="outline-none mobile-menu-button">
+            <svg class=" w-6 h-6 text-gray-500 hover:text-green-500 " fill="none" stroke-linecap="round"
+              stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
+              <path d="M4 6h16M4 12h16m-7 6h7"></path>
+            </svg>
+          </button>
         </div>
+        <!-- Menu vertical pour mobile -->
+        <div class="hidden mobile-menu md:hidden">
+          <a href="#"
+            class="block py-2 px-4 header-text font-semibold hover:text-green-500 transition duration-300">Home</a>
+          <a href="#"
+            class="block py-2 px-4 header-text font-semibold hover:text-green-500 transition duration-300">What is
+            TERRYCOIN ?</a>
+          <a href="#"
+            class="block py-2 px-4 header-text font-semibold hover:text-green-500 transition duration-300">Getting
+            Started</a>
+          <a href="#"
+            class="block py-2 px-4 header-text font-semibold hover:text-green-500 transition duration-300">Airdrop</a>
+          <a href="#"
+            class="block py-2 px-4 header-text font-semibold hover:text-green-500 transition duration-300">Exchanges</a>
+        </div>
+        <!-- Sections du menu pour desktop -->
+        <div class="hidden md:flex items-center space-x-1">
+          <a href="#" class="py-4 px-2 header-text font-semibold hover:text-green-500 transition duration-300">Home</a>
+          <a href="#" class="py-4 px-2 header-text font-semibold hover:text-green-500 transition duration-300">What is
+            Terry ?</a>
+          <a href="#" class="py-4 px-2 header-text font-semibold hover:text-green-500 transition duration-300">Getting
+            Started</a>
+          <a href="#"
+            class="py-4 px-2 header-text font-semibold hover:text-green-500 transition duration-300">Airdrop</a>
+          <a href="#"
+            class="py-4 px-2 header-text font-semibold hover:text-green-500 transition duration-300">Exchanges</a>
+        </div>
+      </div>
+    </div>
+  </nav>
 
 
-<br><br><br>
 
-<div class="flex justify-center">
-    <div class="flex flex-wrap md:flex-nowrap bg-light-blue-200 w-full md:max-w-3xl mx-auto p-4">
+
+  <br><br><br><br><br>
+
+  <div class="h-[450px] bg-white flex items-center justify-center relative">
+    <div class="w-full h-full bg-white p-10">
+      <img src="https://i.ibb.co/KL4pZhV/okocean-1.gif" class="w-full h-full object-cover rounded-md"
+        style="border-radius: 60px;height: 450px;">
+    </div>
+    <div class="absolute text-center">
+      <img src="https://i.ibb.co/R7J0Xs8/TERRY-bg.png" class="w-24 mx-auto" alt="Overlay Image">
+      <h1 class=" text-2xl">TERRYCOIN</h1>
+      <p class="text-xl mt-2">Inspired by the internet meme <br>"Terry the Fat Shark"</p>
+    </div>
+  </div>
+
+  <br><br><br><br>
+
+
+  <div class="text-center my-8 mx-4 md:mx-8">
+    <h1 class="text-4xl font-bold mb-4">Who is Terry the Fat Shark ?</h1><br><br>
+    <div class="flex justify-center">
+      <div class="flex flex-wrap md:flex-nowrap bg-light-blue-200 w-full md:max-w-3xl mx-auto p-4">
         <!-- Text section on the left -->
         <div class="w-full md:w-1/2 px-2">
-            <h1 class="text-2xl font-bold mb-2">Who is Terry the Fat Shark ?</h1>
-            <p class="text-base">Terry the Fat Shark is known for his kindness and he has a unique tradition: every Wednesday, he presents a "Token of Friendship" to a fellow sea creature. 
-                <br><br>
-                This act of kindness inspired the creation of "TerryCoin," a cryptocurrency named after him, symbolizing the value of giving and community in the digital world.
-            </p>
+          <p class="text-base">Terry the Shark is known for his kindness and he has a unique tradition: every Wednesday,
+            he presents a "Token of Friendship" to a fellow sea creature.
+            <br><br>
+            This act of kindness inspired the creation of "TerryCoin," a cryptocurrency named after him, symbolizing the
+            value of giving and community in the digital world.
+          </p>
         </div>
 
         <!-- Image section on the right -->
         <div class="w-full md:w-1/2 px-2 flex justify-center">
-            <img src="https://i.kym-cdn.com/photos/images/newsfeed/001/903/764/8ec.jpg" alt="Descriptive Image" class="image-size h-auto my-auto">
+          <img src="https://i.kym-cdn.com/photos/images/newsfeed/001/903/764/8ec.jpg" alt="Descriptive Image"
+            class="image-size h-auto my-auto">
         </div>
+      </div>
     </div>
-</div>
+
+
+  </div>
+
+<br><br>
+<br>
+<br>
+
+
+  <div class="text-center my-8">
+    <h1 class="text-4xl font-bold mb-4">Getting Started</h1><br><br>
+    <div class="flex flex-wrap justify-center gap-4">
+      <div class="max-w-sm rounded overflow-hidden shadow-lg">
+        <div class="image-resize">
+          <img src="https://i.ibb.co/Zf041sm/metamask.png" alt="Image 1">
+        </div>
+        <div class="px-6 py-4">
+          <div class="font-bold text-xl mb-2">Create MetaMask Wallet</div>
+          <p class="text-gray-700 text-base">
+            Download and install the MetaMask extension for your browser and follow the setup process to create a new
+            wallet.
+          </p>
+        </div>
+      </div>
+      <div class="max-w-sm rounded overflow-hidden shadow-lg">
+        <div class="image-resize">
+          <img src="https://i.ibb.co/SxbnPD6/polygon.png" alt="Image 2">
+        </div>
+        <div class="px-6 py-4">
+          <div class="font-bold text-xl mb-2">Select the Polygon Network</div>
+          <p class="text-gray-700 text-base">
+            Go to the MetaMask network selection dropdown and choose "Add Network," then enter Polygon's network details
+            to connect.
+          </p>
+        </div>
+      </div>
+      <div class="max-w-sm rounded overflow-hidden shadow-lg">
+        <div class="image-resize">
+          <img src="https://i.ibb.co/KzpGmn4/tokens-removebg-preview.png" alt="Image 3">
+        </div>
+        <div class="px-6 py-4">
+          <div class="font-bold text-xl mb-2">Send WMATIC to your wallet</div>
+          <p class="text-gray-700 text-base">
+            Copy your MetaMask wallet address, go to an exchange where you have WMATIC, and send it to the copied
+            address.
+          </p>
+        </div>
+      </div>
+      <div class="max-w-sm rounded overflow-hidden shadow-lg">
+        <div class="image-resize">
+          <img src="https://i.ibb.co/HYVzqqh/swap-removebg-preview.png" alt="Image 4">
+        </div><br>
+        <div class="px-6 py-4">
+          <div class="font-bold text-xl mb-2">Swap WMATIC for TERRYCOIN</div>
+          <p class="text-gray-700 text-base">
+            Access to Uniswap via the link below in the page, connect your MetaMask, then swap your WMATIC for
+            TERRYCOIN.
+
+
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <br><br><br><br>
+
+
+
+  <div class="text-center my-8 mx-4 md:mx-8">
+    <h1 class="text-4xl font-bold mb-4">Why choose $TERRY ?</h1><br><br><br><br>
+
+    <div class="flex md:flex-row flex-col justify-around items-center md:h-64 space-y-8 md:space-y-0 md:space-x-8">
+
+      <div class="flex flex-col items-center">
+        <div class="flex justify-center">
+          <img src="https://i.ibb.co/0mXJ67N/terrycoin.png" alt="Image 1" class="mb-4" style="max-width:70px;">
+        </div>
+        <div class="mx-2 md:mx-4">
+          <p class="text-base mb-4">TerryCoin is a viral narrative based on the internet meme "Terry the Fat Shark",
+            known for his sense of humor and his generosity.</p>
+        </div>
+      </div>
+
+      <div class="flex flex-col items-center">
+        <div class="flex justify-center">
+          <img src="https://i.ibb.co/0mXJ67N/terrycoin.png" alt="Image 2" class="mb-4" style="max-width:70px;">
+        </div>
+        <div class="mx-2 md:mx-4">
+          <p class="text-base mb-4">It will be more than just a memecoin, featuring several unique use cases and
+            utilities that are beneficial to the long term growth of the Polygon Ecosystem.</p>
+        </div>
+      </div>
+
+      <div class="flex flex-col items-center">
+        <div class="flex justify-center">
+          <img src="https://i.ibb.co/0mXJ67N/terrycoin.png" alt="Image 3" class="mb-4" style="max-width:70px;">
+        </div>
+        <div class="mx-2 md:mx-4">
+          <p class="text-base mb-4">The Terry movement is like no other on the Polygon blockchain, bringing shark and
+            meme lovers from all around the crypto space and uniting them into one.</p>
+        </div>
+      </div>
+
+      <div class="flex flex-col items-center">
+        <div class="flex justify-center">
+          <img src="https://i.ibb.co/0mXJ67N/terrycoin.png" alt="Image 4" class="mb-4" style="max-width:70px;">
+        </div>
+        <div class="mx-2 md:mx-4">
+          <p class="text-base mb-4">With the Polygon blockchain, it's time for TerryCoin to come in and set the standard
+            for memecoins on Polygon. There's a new shark in the ocean !</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
 
 
 
 
 
 
-        
+
+  </div>
 
 
-    </body>
+  <br><br><br><br><br><br><br>
+
+  <div class="text-center my-8" style="max-width: 1000px; margin: auto;">
+    <h1 class="text-4xl font-bold mb-4">Market infos</h1> <br><br>
+    <div class="container mx-auto p-4">
+      <div class="bg-gray-200 rounded-lg overflow-hidden shadow-lg">
+        <div class="flex items-center justify-center p-4">
+          <div class="flex-shrink-0">
+            <img class="h-16 w-16 rounded-full" src="https://i.ibb.co/0mXJ67N/terrycoin.png"
+              alt="">
+          </div>
+          <div class="ml-4 text-center">
+            <div class="text-lg leading-5 font-bold text-gray-900">TerryCoin ($TERRY)</div>
+            <div class="text-md leading-5 font-medium text-gray-500">1.57e-7 USD <span
+                class="text-red-600">(-2,01%)</span></div>
+          </div>
+        </div>
+        <div class="border-t border-gray-300">
+          <div class="grid grid-cols-3 divide-x divide-gray-300 text-center">
+            <div class="p-4">
+              <div class="text-sm font-medium text-gray-600">Fully Diluted Valuation</div>
+              <div class="text-lg font-bold text-gray-900">$86.32 M</div>
+            </div>
+            <div class="p-4">
+              <div class="text-sm font-medium text-gray-600">MARKET CAP</div>
+              <div class="text-lg font-bold text-gray-900">$86.32 M</div>
+            </div>
+            <div class="p-4">
+              <div class="text-sm font-medium text-gray-600">Liquidity</div>
+              <div class="text-lg font-bold text-gray-900">$11.24 M</div>
+            </div>
+          </div>
+        </div>
+        <div class="text-center p-2 text-sm italic bg-gray-100">
+          <a href="https://www.geckoterminal.com/fr/polygon_pos/pools/0xc649ec85028055928f728fa461eff9512a7be617" target="_blank" class="text-blue-600 hover:text-blue-800">Powered by
+            CoinGecko</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <br><br><br><br><br><br>
+  <div class="text-center my-8 mx-auto" style="max-width: 1200px;">
+    <h1 class="text-4xl font-bold mb-4">Tokenomics</h1>
+
+
+    <div class="relative" style="height: 400px; max-width: 1200px; margin: 0 auto; padding: 20px;">
+      <div class="w-full h-full"
+        style="background: linear-gradient(74.45deg, #5ABCFF 1.53%, #E2CAF8 102.07%); border-radius: 30px;">
+      </div>
+      <div class="absolute top-1/2 left-0 transform -translate-y-1/2 p-10 w-1/2 text-white"
+        style="max-width: calc(50% - 20px);">
+        Liquidity: Burned Forever<br><br>
+        Network: Polygon <br><br>
+       
+       
+        Tax: 0% <br><br>
+        Total Supply:<br> 93.700.000.000.000 
+      </div>
+      <div class="absolute top-1/2 right-0 transform -translate-y-1/2 p-10 w-1/2" style="max-width: calc(50% - 20px);">
+        <div class="text-white">
+          <button onclick="copyAddress()"
+            class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
+            Copy Token Address
+          </button>
+        </div>
+      </div>
+    </div>
+
+
+
+
+    <div class="flex justify-between" style="max-width: 1200px; margin: 20px auto 0; padding: 0 20px;">
+
+
+      <div class="w-1/2"
+        style="background: linear-gradient(74.45deg, #5ABCFF 1.53%, #E2CAF8 102.07%); border-radius: 30px; margin-right: 10px; height: 200px; display: flex; align-items: center; justify-content: center; flex-direction: column; color: white;">
+        <div style="width: 20%; text-align: center;">
+          <img src="https://i.ibb.co/0C1WjCJ/bloc-note.png" style="width: 100%; height: auto;">
+        </div><br>
+        Whitepaper
+      </div>
+
+      <div class="w-1/2"
+        style="background: linear-gradient(74.45deg, #5ABCFF 1.53%, #E2CAF8 102.07%);        border-radius: 30px; margin-left: 10px; height: 200px; display: flex; align-items: center; justify-content: center; color: white;flex-direction: column;">
+        <div style="width: 23%; text-align: center;">
+          <img src="https://i.ibb.co/Kxzjfxp/unisap.png" style="width: 100%; height: auto;">
+        </div><br>
+        Swap on Uniswap
+      </div>
+    </div>
+
+  </div>
+
+
+
+
+  <br><br><br><br>
+
+
+
+
+
+
+  <div class="bg-blue-100 px-4 py-5 text-center">
+    <br><br><br>
+    <h1 class="text-4xl font-bold mb-4">Socials</h1>
+    <h3 class="text-base font-bold tracking-tight text-gray-900 sm:text-lg">Join the TerryCoin community for an enhanced
+      experience.</h3>
+    <div class="flex flex-wrap justify-center gap-4 mt-6">
+      <a href="https://twitter.com/TerryCoinOff"
+        class="flex items-center bg-black rounded-lg text-white px-5 py-3 w-100 h-23 justify-center">
+        <img src="https://i.ibb.co/tQ6qsYw/X.png" alt="Twitter" class="h-20 w-20 mr-3 max-h-[80px] max-w-[80px]">
+        <div>
+          <p class="font-bold">Join TerryCoin on Twitter</p>
+          <p>To get the lastest news</p>
+        </div>
+      </a>
+      <a href="https://t.me/+-MFHOBH4wkBhZGQ0"
+        class="flex items-center bg-blue-600 rounded-lg text-white px-5 py-3 w-100 h-23 justify-center">
+        <img src="https://i.ibb.co/8Pn6Vs5/telegram-removebg-preview.png" alt="Telegram"
+          class="h-20 w-20 mr-3 max-h-[80px] max-w-[80px]">
+        <div>
+          <p class="font-bold">Join TerryCoin on Telegram</p>
+          <p>To get breaking insights</p>
+        </div>
+      </a>
+      <a href="https://discord.gg/TerryCoin"
+        class="flex items-center bg-purple-600 rounded-lg text-white px-5 py-3 w-100 h-23 justify-center">
+        <img src="https://i.ibb.co/4FBgrb8/discord.png" alt="Twitter" class="w-20 mr-3 max-w-[80px]">
+
+        <div>
+          <p class="font-bold">Join TerryCoin on Discord</p>
+          <p>To chat with the community</p>
+        </div>
+      </a>
+    </div>
+    <br><br><br>
+  </div>
+
+
+
+  <br><br><br>
+
+  <div class="w-full px-4 py-10 flex justify-center">
+    <div class="max-w-4xl" style="width: 100%;">
+      <h2 class="text-4xl font-bold text-blue-500 mb-5 text-center">FAQs</h2>
+      <div class="space-y-3 flex flex-col items-center">
+        <!-- Accordion 1 -->
+        <div class="bg-white rounded-xl shadow" onclick="toggleAccordion(1)" style="max-width: 600px; width: 100%;">
+          <div class="flex items-center justify-between p-4 cursor-pointer">
+            <h3 class="text-lg font-medium">Is the TerryCoin project open source ?</h3>
+            <svg id="arrow-1" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 transform transition-transform"
+              fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+            </svg>
+          </div>
+          <div id="content-1" class="max-h-0 overflow-hidden transition-all duration-700 ease-in-out rounded-b-xl">
+            <p class="bg-gray-100 text-gray-600 rounded-b-xl">Yes, the TerryCoin project is open source, and there is a
+              GitHub repository where the code and development of TerryCoin can be accessed and reviewed by the
+              community.
+              <br> <br>
+              This openness allows for transparency and collaboration among developers and supporters,
+
+              fostering a sense of community in line with Terry the Shark's values of kindness and generosity.
+
+              <br><br>
+              <a href="https://github.com/lucky-blip?tab=repositories"
+                target="_blank">https://github.com/lucky-blip?tab=repositories</a>
+
+
+
+
+
+
+            </p>
+          </div>
+        </div>
+
+        <!-- Accordion 2 -->
+        <div class="bg-white rounded-xl shadow" onclick="toggleAccordion(2)" style="max-width: 600px; width: 100%;">
+          <div class="flex items-center justify-between p-4 cursor-pointer">
+            <h3 class="text-lg font-medium">How to participate to TerryCoin airdrops ?</h3>
+            <svg id="arrow-2" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 transform transition-transform"
+              fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+            </svg>
+          </div>
+          <div id="content-2" class="max-h-0 overflow-hidden transition-all duration-700 ease-in-out rounded-b-xl">
+            <p class="bg-gray-100 text-gray-600 rounded-b-xl">Every Wednesday, we conduct airdrops on our Twitter
+              platform, where you can stay updated on the latest information and participate in these events to receive
+              TerryCoin tokens.
+              <br><br>
+              Keep an eye on our Twitter feed for announcements and instructions on how to join the airdrops and be part
+              of the TerryCoin community.
+              <br><br>
+              <a href="https://twitter.com/TerryCoinOff" target="_blank">https://twitter.com/TerryCoinOff</a>
+
+            </p>
+
+          </div>
+        </div>
+
+        <!-- Accordion 3 -->
+        <div class="bg-white rounded-xl shadow" onclick="toggleAccordion(3)" style="max-width: 600px; width: 100%;">
+          <div class="flex items-center justify-between p-4 cursor-pointer">
+            <h3 class="text-lg font-medium">Is There A TerryCoin Whitepaper Available ?</h3>
+            <svg id="arrow-3" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 transform transition-transform"
+              fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+            </svg>
+          </div>
+          <div id="content-3" class="max-h-0 overflow-hidden transition-all duration-700 ease-in-out rounded-b-xl">
+            <p class="bg-gray-100 text-gray-600 rounded-b-xl">Yes, there is a TerryCoin Whitepaper available. You can
+              access it by following this link:
+
+              <br><br>
+              This Whitepaper provides detailed information about TerryCoin's project, its goals, roadmap, and technical
+              specifications, giving you a comprehensive understanding of what TerryCoin aims to achieve in the crypto
+              space.
+
+            </p>
+          </div>
+        </div>
+
+        <!-- Accordion 4 -->
+        <div class="bg-white rounded-xl shadow" onclick="toggleAccordion(4)" style="max-width: 600px; width: 100%;">
+          <div class="flex items-center justify-between p-4 cursor-pointer">
+            <h3 class="text-lg font-medium">Has TerryCoin undergone any security audits ?</h3>
+            <svg id="arrow-4" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 transform transition-transform"
+              fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+            </svg>
+          </div>
+          <div id="content-4" class="max-h-0 overflow-hidden transition-all duration-700 ease-in-out rounded-b-xl">
+            <p class="bg-gray-100 text-gray-600 rounded-b-xl">Yes, TerryCoin has undergone a thorough security audit,
+              and the token contract has been verified as open source.
+              <br><br>
+              The contract has been carefully examined to ensure transparency and eliminate potential security risks
+              such as hidden functions, proxy contracts, and unauthorized modifications to token balances. With no
+              hidden owners or self-destruct functions, TerryCoin demonstrates a commitment to a secure and reliable
+              ecosystem for its users.
+              <br><br>
+              <a href="https://gopluslabs.io/token-security/137/0x7a7e3516ad9b1d853afb9e8824241f8b4510552a"
+                target="_blank">https://gopluslabs.io/token-security/137/0x7a7e3516ad9b1d853afb9e8824241f8b4510552a</a>
+
+
+
+
+
+
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+  <br><br>
+
+
+  <footer class="bg-black text-white p-10">
+    <div class="max-w-6xl mx-auto flex flex-wrap justify-between">
+      <!-- Left Side -->
+      <div class="flex flex-col space-y-4 mb-10">
+        <span class="text-2xl font-bold">TERRYCOIN</span>
+        <span>Proudly Based Worldwide.</span>
+        <a href="mailto:admin@terryco.in" class="text-blue-300 hover:text-blue-500">Admin@Terryco.in</a>
+      </div>
+
+
+      <!-- Right Side -->
+      <div class="flex space-x-10">
+        <div class="flex flex-col space-y-4">
+          <span class="font-bold">Contract</span>
+          <a href="https://polygonscan.com/token/0x7a7e3516ad9b1d853afb9e8824241f8b4510552a"
+            class="hover:text-gray-300">PolygonScan</a>
+          <a href="https://coinmarketcap.com/dexscan/fr/polygon/0xc649ec85028055928f728fa461eff9512a7be617/"
+            class="hover:text-gray-300">CoinMarketcap</a>
+          <a href="https://www.geckoterminal.com/fr/polygon_pos/pools/0xc649ec85028055928f728fa461eff9512a7be617"
+            class="hover:text-gray-300">CoinGecko</a>
+        </div>
+
+        <div class="flex flex-col space-y-4">
+          <span class="font-bold">More</span>
+          <a href="#" class="hover:text-gray-300">Whitepaper</a>
+          <a href="https://github.com/lucky-blip?tab=repositories" class="hover:text-gray-300">Github</a>
+          <a href="https://gopluslabs.io/token-security/137/0x7a7e3516ad9b1d853afb9e8824241f8b4510552a" class="hover:text-gray-300">Audit</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+
 </body>
+
 </html>
