@@ -7,10 +7,7 @@
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <style>
-    /* Style personnalisé pour le header */
-    .header-text {
-      color: rgb(184, 60, 16);
-    }
+
 
     .bg-gif {
       background-image: url('https://i.ibb.co/KL4pZhV/okocean-1.gif');
@@ -94,7 +91,7 @@
         };
     </script> -->
 
-  <nav class="header-bg shadow-lg fixed w-full z-10">
+  <nav class="header-bg bg-white shadow-lg fixed w-full z-10">
     <div class="max-w-6xl mx-auto px-4">
       <div class="flex justify-between items-center">
         <div>
@@ -116,28 +113,30 @@
         <div class="hidden mobile-menu md:hidden">
           <a href="#"
             class="block py-2 px-4 header-text font-semibold hover:text-green-500 transition duration-300">Home</a>
-          <a href="#"
-            class="block py-2 px-4 header-text font-semibold hover:text-green-500 transition duration-300">What is
-            TERRYCOIN ?</a>
-          <a href="#"
+          <a href="#one"
             class="block py-2 px-4 header-text font-semibold hover:text-green-500 transition duration-300">Getting
             Started</a>
-          <a href="#"
-            class="block py-2 px-4 header-text font-semibold hover:text-green-500 transition duration-300">Airdrop</a>
-          <a href="#"
-            class="block py-2 px-4 header-text font-semibold hover:text-green-500 transition duration-300">Exchanges</a>
+          <a href="#two"
+            class="block py-2 px-4 header-text font-semibold hover:text-green-500 transition duration-300">Airdrops</a>
+          <a href="#three"
+            class="block py-2 px-4 header-text font-semibold hover:text-green-500 transition duration-300">Tokenomics</a>
+          <a href="#four"
+            class="block py-2 px-4 header-text font-semibold hover:text-green-500 transition duration-300">Buy $Terry</a>
+            <a href="#five"
+            class="block py-2 px-4 header-text font-semibold hover:text-green-500 transition duration-300">Socials</a>
         </div>
         <!-- Sections du menu pour desktop -->
         <div class="hidden md:flex items-center space-x-1">
           <a href="#" class="py-4 px-2 header-text font-semibold hover:text-green-500 transition duration-300">Home</a>
-          <a href="#" class="py-4 px-2 header-text font-semibold hover:text-green-500 transition duration-300">What is
-            Terry ?</a>
-          <a href="#" class="py-4 px-2 header-text font-semibold hover:text-green-500 transition duration-300">Getting
+          <a href="#one" class="py-4 px-2 header-text font-semibold hover:text-green-500 transition duration-300">Getting
             Started</a>
-          <a href="#"
-            class="py-4 px-2 header-text font-semibold hover:text-green-500 transition duration-300">Airdrop</a>
-          <a href="#"
-            class="py-4 px-2 header-text font-semibold hover:text-green-500 transition duration-300">Exchanges</a>
+          <a href="#two" class="py-4 px-2 header-text font-semibold hover:text-green-500 transition duration-300">Airdrops</a>
+          <a href="#three"
+            class="py-4 px-2 header-text font-semibold hover:text-green-500 transition duration-300">Tokenomics</a>
+          <a href="#four"
+            class="py-4 px-2 header-text font-semibold hover:text-green-500 transition duration-300">Buy $Terry</a>
+            <a href="#five"
+            class="block py-2 px-4 header-text font-semibold hover:text-green-500 transition duration-300">Socials</a>
         </div>
       </div>
     </div>
@@ -168,7 +167,7 @@
     <div class="flex justify-center">
       <div class="flex flex-wrap md:flex-nowrap bg-light-blue-200 w-full md:max-w-3xl mx-auto p-4">
         <!-- Text section on the left -->
-        <div class="w-full md:w-1/2 px-2">
+        <div class="w-full md:w-1/2 px-2 mb-4 md:mb-0">
           <p class="text-base">Terry the Shark is known for his kindness and he has a unique tradition: every Wednesday,
             he presents a "Token of Friendship" to a fellow sea creature.
             <br><br>
@@ -176,7 +175,7 @@
             value of giving and community in the digital world.
           </p>
         </div>
-
+  
         <!-- Image section on the right -->
         <div class="w-full md:w-1/2 px-2 flex justify-center">
           <img src="https://i.kym-cdn.com/photos/images/newsfeed/001/903/764/8ec.jpg" alt="Descriptive Image"
@@ -184,6 +183,8 @@
         </div>
       </div>
     </div>
+  </div>
+  
 
 
   </div>
@@ -240,12 +241,12 @@
 </div> 
 <br><br><br><br>
 
-  <div class="text-center my-8">
+  <div class="text-center my-8" id="one">
     <h1 class="text-4xl font-bold mb-4">Getting Started</h1><br><br>
     <div class="flex flex-wrap justify-center gap-4">
       <div class="max-w-sm rounded overflow-hidden shadow-lg">
         <div class="image-resize">
-          <img src="https://i.ibb.co/Zf041sm/metamask.png" alt="Image 1">
+          <img src="./img/metamask.png" alt="Image 1">
         </div>
         <div class="px-6 py-4">
           <div class="font-bold text-xl mb-2">Create MetaMask Wallet</div>
@@ -257,7 +258,7 @@
       </div>
       <div class="max-w-sm rounded overflow-hidden shadow-lg">
         <div class="image-resize">
-          <img src="https://i.ibb.co/SxbnPD6/polygon.png" alt="Image 2">
+          <img src="./img/polygon.png" alt="Image 2">
         </div>
         <div class="px-6 py-4">
           <div class="font-bold text-xl mb-2">Select the Polygon Network</div>
@@ -269,7 +270,7 @@
       </div>
       <div class="max-w-sm rounded overflow-hidden shadow-lg">
         <div class="image-resize">
-          <img src="https://i.ibb.co/KzpGmn4/tokens-removebg-preview.png" alt="Image 3">
+          <img src="./img/tokens-removebg-preview.png" alt="Image 3">
         </div>
         <div class="px-6 py-4">
           <div class="font-bold text-xl mb-2">Send WMATIC to your wallet</div>
@@ -281,7 +282,7 @@
       </div>
       <div class="max-w-sm rounded overflow-hidden shadow-lg">
         <div class="image-resize">
-          <img src="https://i.ibb.co/HYVzqqh/swap-removebg-preview.png" alt="Image 4">
+          <img src="./img/swap-removebg-preview.png" alt="Image 4">
         </div><br>
         <div class="px-6 py-4">
           <div class="font-bold text-xl mb-2">Swap WMATIC for TERRYCOIN</div>
@@ -300,28 +301,46 @@
 
 
 
-
-
-  <div class="text-center my-8">
+  <div class="text-center my-8" style="display: flex; justify-content: center; flex-direction: column; align-items: center;" id="two">
     <h1 class="text-4xl font-bold mb-4">Airdrops</h1><br><br>
+    <div style="border: 2px solid; padding: 20px; text-align: left; border-radius: 15px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); margin: 20px; background-color: #f0f0f0;">
+      <div style="text-align: center; font-size: 20px; font-weight: bold; margin-bottom: 15px;">🚨 Key infos: 🚨</div>
+      🚀 TerryCoin Airdrop Weekly: Live every Wednesday at 6 AM.<br>
+      ⏰ Participation Deadline: Before Tuesday, 11:59 PM.<br>
+      🎲 Winning Chance: 25% of participants will win.<br>
+      💰 Reward: Amount based on total participants.<br>
+      🔁 One Condition: Must retweet our post.<br><br>
+    </div>
+  
 
-    <a class="twitter-timeline" href="https://twitter.com/TerryCoinOff?ref_src=twsrc%5Etfw">Tweets by TerryCoinOff</a> 
-    
+    <blockquote class="twitter-tweet" style="align-self: center;">
+      <a href="https://twitter.com/TerryCoinOff/status/1755330105184809074?ref_src=twsrc%5Etfw"></a>
+    </blockquote>
     <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+  
+    <br>
+  
 
   </div>
+  
+
+  
 
 
 
-  <br><br><br><br><br><br><br>
 
+
+
+
+   <!-- 
+    
   <div class="text-center my-8" style="max-width: 1000px; margin: auto;">
     <h1 class="text-4xl font-bold mb-4">Market infos</h1> <br><br>
     <div class="container mx-auto p-4">
       <div class="bg-gray-200 rounded-lg overflow-hidden shadow-lg">
         <div class="flex items-center justify-center p-4">
           <div class="flex-shrink-0">
-            <img class="h-16 w-16 rounded-full" src="https://i.ibb.co/0mXJ67N/terrycoin.png"
+            <img class="h-16 w-16 rounded-full" src="./img/terrycoin.png"
               alt="">
           </div>
           <div class="ml-4 text-center">
@@ -353,9 +372,9 @@
       </div>
     </div>
   </div>
-
-  <br><br><br><br><br><br>
-  <div class="text-center my-8 mx-auto" style="max-width: 1200px;">
+ -->
+  <br><br><br>
+  <div class="text-center my-8 mx-auto" style="max-width: 1200px;"id="three">
     <h1 class="text-4xl font-bold mb-4">Tokenomics</h1>
 
 
@@ -410,14 +429,29 @@
 
 
 
-  <br><br><br><br>
+
+  <br><br><br><br><br><br>
 
 
+  <div class="text-center my-8" style="max-width: 1000px; margin: auto;"id="four">
+    <h1 class="text-4xl font-bold mb-4">Buy on Uniswap</h1> <br><br>
+
+    <div style="max-width: 600px; margin: 0 auto; border-radius: 10px; overflow: hidden;">
+      <iframe
+        src="https://app.uniswap.org/#/swap?outputCurrency=0x7a7e3516ad9b1d853afb9e8824241f8b4510552a"
+        height="660px"
+        width="100%"
+        style="border: 0; display: block; min-width: 300px;"
+      ></iframe>
+    </div>
+    
 
 
+  </div>
 
+<br><br><br><br><br><br>
 
-  <div class="bg-blue-100 px-4 py-5 text-center">
+  <div class="bg-blue-100 px-4 py-5 text-center" id="five">
     <br><br><br>
     <h1 class="text-4xl font-bold mb-4">Socials</h1>
     <h3 class="text-base font-bold tracking-tight text-gray-900 sm:text-lg">Join the TerryCoin community for an enhanced
@@ -425,7 +459,7 @@
     <div class="flex flex-wrap justify-center gap-4 mt-6">
       <a href="https://twitter.com/TerryCoinOff"
         class="flex items-center bg-black rounded-lg text-white px-5 py-3 w-100 h-23 justify-center">
-        <img src="https://i.ibb.co/tQ6qsYw/X.png" alt="Twitter" class="h-20 w-20 mr-3 max-h-[80px] max-w-[80px]">
+        <img src="./img/X.png" alt="Twitter" class="h-20 w-20 mr-3 max-h-[80px] max-w-[80px]">
         <div>
           <p class="font-bold">Join TerryCoin on Twitter</p>
           <p>To get the lastest news</p>
@@ -433,7 +467,7 @@
       </a>
       <a href="https://t.me/+-MFHOBH4wkBhZGQ0"
         class="flex items-center bg-blue-600 rounded-lg text-white px-5 py-3 w-100 h-23 justify-center">
-        <img src="https://i.ibb.co/8Pn6Vs5/telegram-removebg-preview.png" alt="Telegram"
+        <img src="./img/telegram-removebg-preview.png" alt="Telegram"
           class="h-20 w-20 mr-3 max-h-[80px] max-w-[80px]">
         <div>
           <p class="font-bold">Join TerryCoin on Telegram</p>
@@ -442,7 +476,7 @@
       </a>
       <a href="https://discord.gg/TerryCoin"
         class="flex items-center bg-purple-600 rounded-lg text-white px-5 py-3 w-100 h-23 justify-center">
-        <img src="https://i.ibb.co/4FBgrb8/discord.png" alt="Twitter" class="w-20 mr-3 max-w-[80px]">
+        <img src="./img/discord.png" alt="Twitter" class="w-20 mr-3 max-w-[80px]">
 
         <div>
           <p class="font-bold">Join TerryCoin on Discord</p>
