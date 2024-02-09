@@ -45,7 +45,7 @@
     }
 
     .hover\:text-green-500:hover {
-    color: #f97316; /* This is the Tailwind CSS orange-500 color */
+    color: #f97316; 
   }
 
 
@@ -55,6 +55,18 @@
     }
   }
 
+  .curved-div {
+  position: relative;
+  background: #DBEAFE;
+  text-align: center;
+  overflow: hidden;
+}
+.curved-div svg {
+  display: block;
+}
+.curved-div.upper {
+  background: #fff;
+}
 
 
 
@@ -196,8 +208,7 @@
   
         
         <div class="w-full md:w-1/2 px-2 flex justify-center ">
-          <img src="https://i.kym-cdn.com/photos/images/newsfeed/001/903/764/8ec.jpg" alt="Descriptive Image"
-            class="image-size h-auto my-auto">
+          <img src="./img/meme.jpg"  class="image-size h-auto my-auto">
         </div>
       </div>
     </div>
@@ -207,64 +218,79 @@
 
   </div>
 
-<br><br>
-<br>
-<br>
 
-<div class="text-center  my-8 mx-4 md:mx-8">
-  <h1 class="text-4xl font-bold mb-4 titlefont">Why choose $TERRY ?</h1><img src="./img/underline.png" style="max-width:100px;margin: 0 auto;"><br><br><br><br>
+<div class="curved-div upper">
+  <svg viewBox="0 0 1440 319">
+    <path fill="#DBEAFE" fill-opacity="1" d="M0,32L48,80C96,128,192,224,288,224C384,224,480,128,576,90.7C672,53,768,75,864,96C960,117,1056,139,1152,149.3C1248,160,1344,160,1392,160L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+  </svg>
+</div>  
+<div class="curved-div">
 
-  <div class="flex md:flex-row flex-col justify-around items-center md:h-64 space-y-8 md:space-y-0 md:space-x-8">
 
-    <div class="flex flex-col items-center">
-      <div class="flex justify-center">
-        <img src="./img/cut.png" alt="Image 1" class="mb-4" style="max-width:70px;">
+  <div class="text-center  my-8 mx-4 md:mx-8">
+    <h1 class="text-4xl font-bold mb-4 titlefont">Why choose $TERRY ?</h1><img src="./img/underline.png" style="max-width:100px;margin: 0 auto;"><br><br><br><br>
+  
+    <div class="flex md:flex-row flex-col justify-around items-center md:h-64 space-y-8 md:space-y-0 md:space-x-8">
+  
+      <div class="flex flex-col items-center">
+        <div class="flex justify-center">
+          <img src="./img/cut.png" alt="Image 1" class="mb-4" style="max-width:70px;">
+        </div>
+        <div class="mx-2 md:mx-4">
+          <p class="text-base mb-4">TerryCoin is a viral narrative based on the internet meme "Terry the Fat Shark",
+            known for his sense of humor and his generosity.</p>
+        </div>
       </div>
-      <div class="mx-2 md:mx-4">
-        <p class="text-base mb-4">TerryCoin is a viral narrative based on the internet meme "Terry the Fat Shark",
-          known for his sense of humor and his generosity.</p>
+  
+      <div class="flex flex-col items-center">
+        <div class="flex justify-center">
+          <img src="./img/shark.png" alt="Image 2" class="mb-4" style="max-width:70px;">
+        </div>
+        <div class="mx-2 md:mx-4">
+          <p class="text-base mb-4">It will be more than just a memecoin, featuring several unique use cases and
+            utilities that are beneficial to the long term growth of the Polygon Ecosystem.</p>
+        </div>
       </div>
+  
+      <div class="flex flex-col items-center">
+        <div class="flex justify-center">
+          <img src="./img/surf.png" alt="Image 3" class="mb-4" style="max-width:70px;">
+        </div>
+        <div class="mx-2 md:mx-4">
+          <p class="text-base mb-4">The Terry movement is like no other on the Polygon blockchain, bringing shark and
+            meme lovers from all around the crypto space and uniting them into one.</p>
+        </div>
+      </div>
+  
+      <div class="flex flex-col items-center">
+        <div class="flex justify-center">
+          <img src="./img/fish.png" alt="Image 4" class="mb-4" style="max-width:70px;">
+        </div>
+        <div class="mx-2 md:mx-4">
+          <p class="text-base mb-4">With the Polygon blockchain, it's time for TerryCoin to come in and set the standard
+            for memecoins on Polygon. There's a new shark in the ocean !</p>
+        </div>
+      </div>
+  
     </div>
+  </div> 
 
-    <div class="flex flex-col items-center">
-      <div class="flex justify-center">
-        <img src="./img/shark.png" alt="Image 2" class="mb-4" style="max-width:70px;">
-      </div>
-      <div class="mx-2 md:mx-4">
-        <p class="text-base mb-4">It will be more than just a memecoin, featuring several unique use cases and
-          utilities that are beneficial to the long term growth of the Polygon Ecosystem.</p>
-      </div>
-    </div>
 
-    <div class="flex flex-col items-center">
-      <div class="flex justify-center">
-        <img src="./img/surf.png" alt="Image 3" class="mb-4" style="max-width:70px;">
-      </div>
-      <div class="mx-2 md:mx-4">
-        <p class="text-base mb-4">The Terry movement is like no other on the Polygon blockchain, bringing shark and
-          meme lovers from all around the crypto space and uniting them into one.</p>
-      </div>
-    </div>
 
-    <div class="flex flex-col items-center">
-      <div class="flex justify-center">
-        <img src="./img/fish.png" alt="Image 4" class="mb-4" style="max-width:70px;">
-      </div>
-      <div class="mx-2 md:mx-4">
-        <p class="text-base mb-4">With the Polygon blockchain, it's time for TerryCoin to come in and set the standard
-          for memecoins on Polygon. There's a new shark in the ocean !</p>
-      </div>
-    </div>
-
-  </div>
-</div> 
+  <svg viewBox="0 0 1440 319">
+    <path fill="#fff" fill-opacity="1" d="M0,32L48,80C96,128,192,224,288,224C384,224,480,128,576,90.7C672,53,768,75,864,96C960,117,1056,139,1152,149.3C1248,160,1344,160,1392,160L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+  </svg>
+</div>  
 
 
 
 
 
 
-<br><br><br><br>
+
+
+
+
 
   <div class="text-center my-8" id="one">
     <h1 class="text-4xl font-bold mb-4 titlefont">Getting Started</h1><img src="./img/underline.png" style="max-width:100px;margin: 0 auto;"><br><br>
@@ -322,9 +348,14 @@
     </div>
   </div>
 
-  <br><br><br><br>
 
 
+  <div class="curved-div upper">
+    <svg viewBox="0 0 1440 319">
+      <path fill="#DBEAFE" fill-opacity="1" d="M0,32L48,80C96,128,192,224,288,224C384,224,480,128,576,90.7C672,53,768,75,864,96C960,117,1056,139,1152,149.3C1248,160,1344,160,1392,160L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+    </svg>
+  </div>  
+  <div class="curved-div">
 
   <div class="text-center my-8" style="display: flex; justify-content: center; flex-direction: column; align-items: center;" id="two">
     <h1 class="text-4xl font-bold mb-4 titlefont">Airdrops</h1><img src="./img/underline.png" style="max-width:100px;margin: 0 auto;"><br><br>
@@ -350,7 +381,10 @@
   
 
   
-
+  <svg viewBox="0 0 1440 319">
+    <path fill="#fff" fill-opacity="1" d="M0,32L48,80C96,128,192,224,288,224C384,224,480,128,576,90.7C672,53,768,75,864,96C960,117,1056,139,1152,149.3C1248,160,1344,160,1392,160L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+  </svg>
+</div>  
 
 
 
@@ -399,11 +433,11 @@
   </div>
  -->
 
- <br><br><br>
+
  <div class="text-center my-8 mx-auto" style="max-width: 1200px;" id="three">
   <h1 class="text-4xl font-bold mb-4 titlefont">Tokenomics</h1> <img src="./img/underline.png" style="max-width:100px;margin: 0 auto;"> <br>  <br> 
 
-  <div class="mx-auto" style="max-width: 800px;">
+  <div class="mx-auto" style="max-width: 700px;">
     <img src="./img/tokenomics.png" class="w-full">
   </div>
 </div>
@@ -489,10 +523,16 @@
 
   </div>
 
-<br><br><br><br><br><br>
+
+<div class="curved-div upper">
+  <svg viewBox="0 0 1440 319">
+    <path fill="#DBEAFE" fill-opacity="1" d="M0,32L48,80C96,128,192,224,288,224C384,224,480,128,576,90.7C672,53,768,75,864,96C960,117,1056,139,1152,149.3C1248,160,1344,160,1392,160L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+  </svg>
+</div>  
+<div class="curved-div">
 
   <div class="bg-blue-100 px-4 py-5 text-center" id="five">
-    <br><br><br>
+
     <h1 class="text-4xl font-bold mb-4 titlefont">Socials</h1><img src="./img/underline.png" style="max-width:100px;margin: 0 auto;"><br><br>
     <h3 class="text-base font-bold tracking-tight  sm:text-lg">Join the TerryCoin community for an enhanced
       experience.</h3>
@@ -527,6 +567,11 @@
     <br><br><br>
   </div>
 
+
+  <svg viewBox="0 0 1440 319">
+    <path fill="#fff" fill-opacity="1" d="M0,32L48,80C96,128,192,224,288,224C384,224,480,128,576,90.7C672,53,768,75,864,96C960,117,1056,139,1152,149.3C1248,160,1344,160,1392,160L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+  </svg>
+</div>  
 
 
   <br><br><br>
